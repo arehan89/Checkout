@@ -1,52 +1,54 @@
 import logo from './logo.svg';
+/* import Navbar from './component/Navbar'; */
 import './App.css';
 
 
 function App() {
 
 return <>
-    <div className='container'>
+<div className='container d-flex'>
+    <form className='form-left'>
         <center><h1>Checkout</h1></center>
         <h4>Información de Contacto</h4>
         
-        <label for="email">Email</label>
-        <nav class="input" className='col-3'>
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-                <input type="email" name="email" id="email" required="" placeholder="Ingrese su correo" 
+        <label htmlFor="email">Email</label>
+        <div className="input">
+                <i className="fas fa-envelope" aria-hidden="true"></i>
+                <input type="email" name="email" id="email" required placeholder="Ingrese su correo" 
                     className='form-control'>
             </input>
-            </nav>
+        </div>
         
-        <label for="phone">Teléfono</label>
-        <nav class="input" className='col-3'>
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-                <input type="phone" name="phone" id="phone" required="" placeholder="Ingrese su teléfono" 
+        <label htmlFor="phone">Teléfono</label>
+        <div className="input">
+                <i className="fas fa-envelope" aria-hidden="true"></i>
+                <input type="phone" name="phone" id="phone" required placeholder="Ingrese su teléfono" 
                     className='form-control'>
             </input>
-            </nav>
+            </div>
             
             <br></br>
             <h4>Dirección de Envío</h4>
 
-            <label for="name">Nombre completo</label>
-        <nav class="input" className='col-3'>
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-                <input type="name" name="name" id="name" required="" placeholder="Ingrese su nombre..." 
+            <label htmlFor="name">Nombre completo</label>
+        <div className="input">
+                <i className="fas fa-envelope" aria-hidden="true"></i>
+                <input type="name" name="name" id="name" required placeholder="Ingrese su nombre..." 
                     className='form-control'>
             </input>
-            </nav>
+            </div>
         
-            <label for="adress">Dirección</label>
-        <nav class="input" className='col-3'>
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-                <input type="adress" name="adress" id="adress" required="" placeholder="Dirección de envío" 
+            <label htmlFor="adress">Dirección</label>
+        <div className="input">
+                <i className="fas fa-envelope" aria-hidden="true"></i>
+                <input type="adress" name="adress" id="adress" required placeholder="Dirección de envío" 
                     className='form-control'>
             </input>
-            </nav>
+            </div>
             
-            <label for="exampleFormControlSelect1">Seleccione su localidad</label><br></br>
+            <label htmlFor="exampleFormControlSelect1">Seleccione su localidad</label><br></br>
             
-            <div className="col-3 col-sm-6 col-md-3 form-group">
+            <div className="formContainer">
     <select className="form-control"  id="exampleFormControlSelect1">
     <option>Seleccione</option>  
       <option>Antonio Nariño</option>
@@ -72,17 +74,37 @@ return <>
     </div>
 
     <br></br>
-    <div class="form-check">
+    <div className="form-check">
     <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"></input>
-        <label class="form-check-label" for="defaultCheck1">
+        <label className="form-check-label" htmlFor="defaultCheck1">
          Guardar información
         </label>
     </div>
                 
                 <br></br>
-                <button type="button" class="btn btn-outline-success">Continuar pago</button>   
+                <button type="submit" className="btn btn-outline-success">Continuar pago</button>   
 
+    </form>
+    <div className='content-right'>
+        <article className='productContainer'>
+            <span className="titleDescription">Acetaminofen</span>
+            <span className="value">$20.200</span>
+            <img alt="service"></img>
+            <div>
+                <input type="number" placeholder="1.0" step="1" min="0"/>
+            </div>
+        </article>
+        <article className='productContainer'>
+            <span className="titleDescription">Acetaminofen</span>
+            <span className="value">$50.000</span>
+            <img alt="service" src="https://www.farmalisto.com.co/95304/acetaminofen-500-mg-american-generics-caja-con-100-tabletas.jpg"></img>
+            <div>
+                <input type="number" placeholder="1.0" step="1" min="0"/>
+            </div>
+        </article>
     </div>
+    {/* divbar></Navbar> */}
+</div>
 
 </>
 
